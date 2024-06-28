@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <section class="main">
+        <header>
+            <a href="#" class="logo"><img src="./Images/logo.png"></a>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+            <a href="#" class="app">Login/Signup </a>
+        </header>
+        
+        <div class="contentbx">
+            <div class="text">
+                <h2>Facebook</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt temporibus error consequatur odio optio quo consequuntur numquam dignissimos, ullam sapiente maiores rerum molestias delectus eum ipsam reiciendis. Ex debitis, ratione expedita ea aut earum ad, dolor ducimus architecto, deserunt necessitatibus.</p>
+
+                <h4>Download the app</h4>
+                <a href="#" class="btn"><ion-icon name="logo-apple"></ion-icon> Apple Store</a>
+                <a href="#" class="btn"><ion-icon name="logo-google-playstore"></ion-icon> Play Store</a>
+            </div>
+
+            <div class="dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            <div class="imgbx">
+                <img src="./Images/zero.png" class="slides active">
+                <img src="./Images/one.png" class="slides">
+                <img src="./Images/two.png" class="slides">
+                <img src="./Images/three.png" class="slides">
+                <img src="./Images/four.png" class="slides">
+            </div>
+        </div>
+
+        <ul class="sci">
+            <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+        </ul>
+    </section>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        const slides = document.querySelectorAll('.slides');
+        const dots = document.querySelectorAll('.dot');
+
+        function SetActive(i){
+            for(slide of slides)
+            slide.classList.remove('active');
+            slides[i].classList.add('active');
+
+            for(dot of dots)
+            dot.classList.remove('active');
+            dots[i].classList.add('active');
+        }
+
+        for(let j=0;j<dots.length;j++){
+            dots[j].addEventListener('click',function(){
+                SetActive(j);
+            })
+        }
+
+
+    </script>
+<!-- <br> -->
+<footer>
+    <div class="footer">
+    <!-- <div class="row">
+    <a href="#"><i class="fa fa-facebook"></i></a>
+    <a href="#"><i class="fa fa-instagram"></i></a>
+    <a href="#"><i class="fa fa-youtube"></i></a>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    </div> -->
+    
+    <div class="row">
+    <ul>
+    <li><a href="#">Contact us</a></li>
+    <li><a href="#">Our Services</a></li>
+    <li><a href="#">Privacy Policy</a></li>
+    <li><a href="#">Terms & Conditions</a></li>
+    <li><a href="#">Career</a></li>
+    </ul>
+    </div>
+    
+    <div class="row">
+    Facebook Copyright © 2024  - All rights reserved || Designed By: Shubham Sahoo
+    </div>
+    </div>
+    </footer>
+</body>
+</html>
